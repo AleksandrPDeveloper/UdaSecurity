@@ -1,0 +1,4 @@
+--patch-module
+imageservice=_
+--add-reads
+imageservice=ALL-UNNAMED

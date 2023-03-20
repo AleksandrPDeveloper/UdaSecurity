@@ -1,0 +1,4 @@
+--patch-module
+securityservice=_
+--add-reads
+securityservice=ALL-UNNAMED
