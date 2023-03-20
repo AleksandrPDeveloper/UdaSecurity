@@ -48,16 +48,21 @@ public class AwsImageService implements ImageService{
             log.error("Unable to initialize AWS Rekognition, no properties file found", ioe);
             return;
         }
+        setRekognitionClient(props);
+    }
 
-        String awsId = props.getProperty("aws.id");
-        String awsSecret = props.getProperty("aws.secret");
-        String awsRegion = props.getProperty("aws.region");
+    public static void setRekognitionClient(Properties props) {
+        if (rekognitionClient == null) {
+            String awsId = props.getProperty("aws.id");
+            String awsSecret = props.getProperty("aws.secret");
+            String awsRegion = props.getProperty("aws.region");
 
-        AwsCredentials awsCredentials = AwsBasicCredentials.create(awsId, awsSecret);
-        rekognitionClient = RekognitionClient.builder()
-                .credentialsProvider(StaticCredentialsProvider.create(awsCredentials))
-                .region(Region.of(awsRegion))
-                .build();
+            AwsCredentials awsCredentials = AwsBasicCredentials.create(awsId, awsSecret);
+            rekognitionClient = RekognitionClient.builder()
+                    .credentialsProvider(StaticCredentialsProvider.create(awsCredentials))
+                    .region(Region.of(awsRegion))
+                    .build();
+        }
     }
 
     /**
