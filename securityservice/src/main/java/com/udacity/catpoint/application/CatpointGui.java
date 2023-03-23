@@ -17,8 +17,8 @@ public class CatpointGui extends JFrame {
     private PretendDatabaseSecurityRepositoryImpl securityRepository = new PretendDatabaseSecurityRepositoryImpl();
     private SecurityService securityService = new SecurityService(securityRepository, new FakeImageService());
     private DisplayPanel displayPanel = new DisplayPanel(securityService);
-    private ControlPanel controlPanel = new ControlPanel(securityService);
     private SensorPanel sensorPanel = new SensorPanel(securityService);
+    private ControlPanel controlPanel = new ControlPanel(securityService, sensorPanel);
     private ImagePanel imagePanel = new ImagePanel(securityService);
 
     public CatpointGui() {

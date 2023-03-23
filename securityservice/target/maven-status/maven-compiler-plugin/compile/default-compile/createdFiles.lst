@@ -5,6 +5,7 @@ com/udacity/catpoint/application/SecurityService$1.class
 com/udacity/catpoint/application/StatusListener.class
 com/udacity/catpoint/data/AlarmStatus.class
 com/udacity/catpoint/data/PretendDatabaseSecurityRepositoryImpl$1.class
+com/udacity/catpoint/application/StyleService.class
 com/udacity/catpoint/data/ArmingStatus.class
 com/udacity/catpoint/application/DisplayPanel.class
 com/udacity/catpoint/application/SecurityService.class
