@@ -84,21 +84,21 @@
 <th>Class</th>
 <th>Bugs</th></tr>
 <tr class="b">
-<td><a href="#com.udacity.catpoint.application.ControlPanel">com.udacity.catpoint.application.ControlPanel</a></td>
+<td><a href="#com.udacity.catpoint.securityservice.application.ControlPanel">com.udacity.catpoint.securityservice.application.ControlPanel</a></td>
 <td>2</td></tr>
 <tr class="a">
-<td><a href="#com.udacity.catpoint.application.ImagePanel">com.udacity.catpoint.application.ImagePanel</a></td>
+<td><a href="#com.udacity.catpoint.securityservice.application.ImagePanel">com.udacity.catpoint.securityservice.application.ImagePanel</a></td>
 <td>2</td></tr>
 <tr class="b">
-<td><a href="#com.udacity.catpoint.application.SecurityService">com.udacity.catpoint.application.SecurityService</a></td>
-<td>3</td></tr>
+<td><a href="#com.udacity.catpoint.securityservice.application.SensorPanel">com.udacity.catpoint.securityservice.application.SensorPanel</a></td>
+<td>1</td></tr>
 <tr class="a">
-<td><a href="#com.udacity.catpoint.application.SensorPanel">com.udacity.catpoint.application.SensorPanel</a></td>
+<td><a href="#com.udacity.catpoint.securityservice.data.PretendDatabaseSecurityRepositoryImpl">com.udacity.catpoint.securityservice.data.PretendDatabaseSecurityRepositoryImpl</a></td>
 <td>1</td></tr>
 <tr class="b">
-<td><a href="#com.udacity.catpoint.data.PretendDatabaseSecurityRepositoryImpl">com.udacity.catpoint.data.PretendDatabaseSecurityRepositoryImpl</a></td>
-<td>1</td></tr></table></section><a name="com.udacity.catpoint.application.ControlPanel"></a><section>
-<h2>com.udacity.catpoint.application.ControlPanel</h2>
+<td><a href="#com.udacity.catpoint.securityservice.service.SecurityService">com.udacity.catpoint.securityservice.service.SecurityService</a></td>
+<td>3</td></tr></table></section><a name="com.udacity.catpoint.securityservice.application.ControlPanel"></a><section>
+<h2>com.udacity.catpoint.securityservice.application.ControlPanel</h2>
 <table class="table table-striped">
 <tr class="a">
 <th>Bug</th>
@@ -107,18 +107,18 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>new com.udacity.catpoint.application.ControlPanel(SecurityService, SensorPanel) may expose internal representation by storing an externally mutable object into ControlPanel.securityService</td>
+<td>new com.udacity.catpoint.securityservice.application.ControlPanel(SecurityService, SensorPanel) may expose internal representation by storing an externally mutable object into ControlPanel.securityService</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>24</td>
+<td>26</td>
 <td>Medium</td></tr>
 <tr class="a">
-<td>new com.udacity.catpoint.application.ControlPanel(SecurityService, SensorPanel) may expose internal representation by storing an externally mutable object into ControlPanel.sensorPanel</td>
+<td>new com.udacity.catpoint.securityservice.application.ControlPanel(SecurityService, SensorPanel) may expose internal representation by storing an externally mutable object into ControlPanel.sensorPanel</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>25</td>
-<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.application.ImagePanel"></a><section>
-<h2>com.udacity.catpoint.application.ImagePanel</h2>
+<td>27</td>
+<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.securityservice.application.ImagePanel"></a><section>
+<h2>com.udacity.catpoint.securityservice.application.ImagePanel</h2>
 <table class="table table-striped">
 <tr class="a">
 <th>Bug</th>
@@ -127,58 +127,18 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>Do not catch NullPointerException like in com.udacity.catpoint.application.ImagePanel.lambda$new$0(ActionEvent)</td>
+<td>Do not catch NullPointerException like in com.udacity.catpoint.securityservice.application.ImagePanel.lambda$new$0(ActionEvent)</td>
 <td>STYLE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#DCN_NULLPOINTER_EXCEPTION">DCN_NULLPOINTER_EXCEPTION</a></td>
-<td>54</td>
+<td>56</td>
 <td>Medium</td></tr>
 <tr class="a">
-<td>new com.udacity.catpoint.application.ImagePanel(SecurityService) may expose internal representation by storing an externally mutable object into ImagePanel.securityService</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>29</td>
-<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.application.SecurityService"></a><section>
-<h2>com.udacity.catpoint.application.SecurityService</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>new com.udacity.catpoint.application.SecurityService(SecurityRepository, ImageService) may expose internal representation by storing an externally mutable object into SecurityService.securityRepository</td>
-<td>MALICIOUS_CODE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
-<td>28</td>
-<td>Medium</td></tr>
-<tr class="a">
-<td>Switch statement found in com.udacity.catpoint.application.SecurityService.handleSensorActivated() where default case is missing</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT</a></td>
-<td>93</td>
-<td>Medium</td></tr>
-<tr class="b">
-<td>Switch statement found in com.udacity.catpoint.application.SecurityService.handleSensorDeactivated() where default case is missing</td>
-<td>STYLE</td>
-<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT</a></td>
-<td>103</td>
-<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.application.SensorPanel"></a><section>
-<h2>com.udacity.catpoint.application.SensorPanel</h2>
-<table class="table table-striped">
-<tr class="a">
-<th>Bug</th>
-<th>Category</th>
-<th>Details</th>
-<th>Line</th>
-<th>Priority</th></tr>
-<tr class="b">
-<td>new com.udacity.catpoint.application.SensorPanel(SecurityService) may expose internal representation by storing an externally mutable object into SensorPanel.securityService</td>
+<td>new com.udacity.catpoint.securityservice.application.ImagePanel(SecurityService) may expose internal representation by storing an externally mutable object into ImagePanel.securityService</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
 <td>31</td>
-<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.data.PretendDatabaseSecurityRepositoryImpl"></a><section>
-<h2>com.udacity.catpoint.data.PretendDatabaseSecurityRepositoryImpl</h2>
+<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.securityservice.application.SensorPanel"></a><section>
+<h2>com.udacity.catpoint.securityservice.application.SensorPanel</h2>
 <table class="table table-striped">
 <tr class="a">
 <th>Bug</th>
@@ -187,10 +147,50 @@
 <th>Line</th>
 <th>Priority</th></tr>
 <tr class="b">
-<td>com.udacity.catpoint.data.PretendDatabaseSecurityRepositoryImpl.getSensors() may expose internal representation by returning PretendDatabaseSecurityRepositoryImpl.sensors</td>
+<td>new com.udacity.catpoint.securityservice.application.SensorPanel(SecurityService) may expose internal representation by storing an externally mutable object into SensorPanel.securityService</td>
+<td>MALICIOUS_CODE</td>
+<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
+<td>33</td>
+<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.securityservice.data.PretendDatabaseSecurityRepositoryImpl"></a><section>
+<h2>com.udacity.catpoint.securityservice.data.PretendDatabaseSecurityRepositoryImpl</h2>
+<table class="table table-striped">
+<tr class="a">
+<th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+<th>Priority</th></tr>
+<tr class="b">
+<td>com.udacity.catpoint.securityservice.data.PretendDatabaseSecurityRepositoryImpl.getSensors() may expose internal representation by returning PretendDatabaseSecurityRepositoryImpl.sensors</td>
 <td>MALICIOUS_CODE</td>
 <td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP">EI_EXPOSE_REP</a></td>
 <td>80</td>
+<td>Medium</td></tr></table></section><a name="com.udacity.catpoint.securityservice.service.SecurityService"></a><section>
+<h2>com.udacity.catpoint.securityservice.service.SecurityService</h2>
+<table class="table table-striped">
+<tr class="a">
+<th>Bug</th>
+<th>Category</th>
+<th>Details</th>
+<th>Line</th>
+<th>Priority</th></tr>
+<tr class="b">
+<td>new com.udacity.catpoint.securityservice.service.SecurityService(SecurityRepository, ImageService) may expose internal representation by storing an externally mutable object into SecurityService.securityRepository</td>
+<td>MALICIOUS_CODE</td>
+<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#EI_EXPOSE_REP2">EI_EXPOSE_REP2</a></td>
+<td>29</td>
+<td>Medium</td></tr>
+<tr class="a">
+<td>Switch statement found in com.udacity.catpoint.securityservice.service.SecurityService.handleSensorActivated() where default case is missing</td>
+<td>STYLE</td>
+<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT</a></td>
+<td>94</td>
+<td>Medium</td></tr>
+<tr class="b">
+<td>Switch statement found in com.udacity.catpoint.securityservice.service.SecurityService.handleSensorDeactivated() where default case is missing</td>
+<td>STYLE</td>
+<td><a class="externalLink" href="https://spotbugs.readthedocs.io/en/latest/bugDescriptions.html#SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT</a></td>
+<td>104</td>
 <td>Medium</td></tr></table></section>
         </main>
       </div>

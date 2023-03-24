@@ -1,4 +1,4 @@
-/Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/com/udacity/catpoint/service/FakeImageService.java
 /Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/module-info.java
-/Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/com/udacity/catpoint/service/ImageService.java
-/Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/com/udacity/catpoint/service/AwsImageService.java
+/Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/com/udacity/catpoint/imageservice/service/AwsImageService.java
+/Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/com/udacity/catpoint/imageservice/service/ImageService.java
+/Users/alexandr/IdeaProjects/UdaSecutityModules/imageservice/src/main/java/com/udacity/catpoint/imageservice/service/FakeImageService.java

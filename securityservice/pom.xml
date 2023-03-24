@@ -25,7 +25,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.udacity.catpoint.application.CatpointApp</mainClass>
+                            <mainClass>com.udacity.catpoint.securityservice.application.CatpointApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

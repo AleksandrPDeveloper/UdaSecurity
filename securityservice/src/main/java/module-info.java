@@ -6,6 +6,6 @@ module securityservice {
     requires java.prefs;
     requires com.miglayout.swing;
     requires transitive imageservice;
-    opens com.udacity.catpoint.data to com.google.gson;
-    exports com.udacity.catpoint.data;
+    opens com.udacity.catpoint.securityservice.data to com.google.gson;
+    exports com.udacity.catpoint.securityservice.data;
 }
